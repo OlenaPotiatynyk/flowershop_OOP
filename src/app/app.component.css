@@ -1,6 +1,7 @@
 .store {
   display: flex;
   flex-flow: wrap;
+  margin: 0 20px;
 }
 
 .filter {
@@ -10,6 +11,7 @@
 
 .cart {
   width: 20%;
+  margin: 16px 4px;
 }
 
 .products {
@@ -17,9 +19,4 @@
   width: 78%;
   justify-content: space-between;
   flex-flow: wrap;
-  border: 1px solid darkgreen;
-}
-
-.inventory_item{
-  width: 23%
 }

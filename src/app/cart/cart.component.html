@@ -1,7 +1,7 @@
 <div class="cart">
   <p><b>Your shopping cart</b></p>
 
-  <div class="item-header">
+  <div class="item_header">
     <div>Item</div>
     <div>Price</div>
     <div>Qty</div>
@@ -19,8 +19,10 @@
     <label for="addressInput" *ngIf="deliveryNeeded">Address</label>
     <input id="addressInput" (ngModelChange)="updateAddress()" [(ngModel)]="address" *ngIf="deliveryNeeded">
   </div>
-  <p>Total: <span>{{cart.totalPrice}}</span></p>
-  <button (click)="placeOrder()">Place Order</button>
+  <div class="cart_footer">
+    <p>Total: <span>{{cart.totalPrice}}</span></p>
+    <button (click)="placeOrder()">Place Order</button>
+  </div>
 </div>
 <div *ngIf="showReceipt">
   <div *ngIf="deliveryNeeded">
