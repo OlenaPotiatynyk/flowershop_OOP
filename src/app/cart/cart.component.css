@@ -10,7 +10,15 @@
 .item_header {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  color: darkgreen;
+}
+
+.item_header div {
+  margin: 0 6px;
+}
+
+.item_name {
+  width: 80px;
 }
 
 .cart_footer {
