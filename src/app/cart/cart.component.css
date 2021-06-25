@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   color: darkgreen;
+  margin-bottom: 10px;
 }
 
 .item_header div {
@@ -25,4 +26,8 @@
   position: absolute;
   bottom: 0;
   padding: 14px 10px;
+}
+
+.order_success {
+  color: darkgreen;
 }

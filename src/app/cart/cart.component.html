@@ -24,7 +24,7 @@
     <button (click)="placeOrder()">Place Order</button>
   </div>
 </div>
-<div *ngIf="showReceipt">
+<div *ngIf="showReceipt" class="order_success">
   <div *ngIf="deliveryNeeded">
     Order Placed, please await delivery at {{cart.getDeliveryItem().address}} {{cart.getDeliveryItem().deliveryDate}}
   </div>

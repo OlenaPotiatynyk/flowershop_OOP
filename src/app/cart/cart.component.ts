@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cart } from '../models/cart/cart'
+import { Cart } from '../models/cart/cart';
 
 @Component({
   selector: 'app-cart',
@@ -8,11 +8,11 @@ import { Cart } from '../models/cart/cart'
 })
 export class CartComponent implements OnInit {
 
-  deliveryNeeded = false
+  deliveryNeeded = false;
   @Input()
-  cart: Cart
-  address: string
-  showReceipt = false
+  cart: Cart;
+  address: string;
+  showReceipt = false;
 
   constructor() {
   }
@@ -22,23 +22,23 @@ export class CartComponent implements OnInit {
 
   addDelivery() {
     if (this.deliveryNeeded) {
-      this.cart.addDeliveryItem()
+      this.cart.addDeliveryItem();
     } else {
-      this.cart.removeDeliveryItem()
+      this.cart.removeDeliveryItem();
     }
   }
 
   placeOrder() {
-    this.showReceipt = true
+    this.showReceipt = true;
     setTimeout(() => {
-      this.cart.clearCart()
-      this.showReceipt = false
-      this.deliveryNeeded = false
-      this.address = ''
+      this.cart.clearCart();
+      this.showReceipt = false;
+      this.deliveryNeeded = false;
+      this.address = '';
     }, 3000);
   }
 
   updateAddress() {
-    this.cart.getDeliveryItem().address = this.address
+    this.cart.getDeliveryItem().address = this.address;
   }
 }

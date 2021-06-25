@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CartItem, DeliveryCartItem, ProductCartItem } from '../../models/cart/cart-item'
+import { CartItem, DeliveryCartItem, ProductCartItem } from '../../models/cart/cart-item';
 
 @Component({
   selector: 'app-cart-item',
@@ -9,7 +9,7 @@ import { CartItem, DeliveryCartItem, ProductCartItem } from '../../models/cart/c
 export class CartItemComponent implements OnInit {
 
   @Input()
-  cartItem: CartItem
+  cartItem: CartItem;
 
   constructor() {
   }
@@ -18,10 +18,10 @@ export class CartItemComponent implements OnInit {
   }
 
   asProduct() {
-    return this.cartItem as ProductCartItem
+    return this.cartItem as ProductCartItem;
   }
 
   asDelivery() {
-    return this.cartItem as DeliveryCartItem
+    return this.cartItem as DeliveryCartItem;
   }
 }

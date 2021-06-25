@@ -11,3 +11,8 @@
 .item_name {
   width: 80px;
 }
+
+.item_address {
+  max-width: 140px;
+  overflow-wrap: break-word;
+}
