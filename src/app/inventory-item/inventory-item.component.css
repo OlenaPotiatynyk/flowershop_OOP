@@ -1,0 +1,30 @@
+.p_card {
+  width: 250px;
+  border: 1px solid darkgreen;
+  margin: 4px;
+}
+
+.p_text {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+}
+
+.p_img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.delivery_controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.button{
+  width: 100px;
+}

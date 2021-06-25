@@ -1,0 +1,16 @@
+<div class="p_card">
+  <img src="{{inventoryItem.product.photoUrl}}" class="p_img">
+  <div class="p_text">
+    <p class="p_name">Name</p>
+    <p class="p_price">Price</p>
+  </div>
+  <div class="p_text">
+    <p class="p_name">{{inventoryItem.product.name}}</p>
+    <p class="p_price">{{inventoryItem.product.price}}</p>
+  </div>
+
+  <div class="delivery_controls">
+    <input class="button" type="number" min="1" max="{{inventoryItem.quantity}}" [(ngModel)]="quantity">
+    <button class="button" (click)="onAddItemToCart()">Add to card</button>
+  </div>
+</div>

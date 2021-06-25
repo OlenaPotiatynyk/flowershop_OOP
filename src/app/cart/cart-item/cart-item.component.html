@@ -1,0 +1,11 @@
+<div class="item" *ngIf="cartItem.isProduct()">
+  <div class="item_name">{{asProduct().product.name}}</div>
+  <div class="item_price">{{asProduct().product.price}}</div>
+  <div class="item_quantity">{{asProduct().quantity}}</div>
+  <div class="item_amount">{{asProduct().cartItemPrice}}</div>
+</div>
+<div class="item" *ngIf="cartItem.isDelivery()">
+  <div class="item_name">Delivery</div>
+  <div class="item_name">{{asDelivery().address}}</div>
+  <div class="item_amount">{{asDelivery().cartItemPrice}}</div>
+</div>

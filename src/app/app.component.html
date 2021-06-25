@@ -1,0 +1,45 @@
+<div class="store">
+
+  <div class="filter">
+    <label for="typeSelect">Product Type</label>
+    <select id="typeSelect" (change)="onTypeSelected($event)">
+      <option value="All">All</option>
+      <option value="Cut">Cut Flowers</option>
+      <option value="Plant">Plant</option>
+      <option value="Seed">Seeds</option>
+    </select>
+    <label for="seedFilter" *ngIf="selectedType === 'Seed'" >Select Weight</label>
+    <select id="seedFilter" *ngIf="selectedType === 'Seed'" (change)="filter($event, 'Seed','weight')">
+      <option value="" hidden></option>
+      <option *ngFor="let option of getAvailableSeedWeights()" value="{{option}}">
+        {{option}} g
+      </option>
+    </select>
+    <label for="cutFilter" *ngIf="selectedType === 'Cut'" >Select Height</label>
+    <select id="cutFilter" *ngIf="selectedType === 'Cut'" (change)="filter($event, 'Cut','height')">
+      <option value="" hidden></option>
+      <option *ngFor="let option of getAvailableCutHeight()" value="{{option}}">
+        {{option}} cm
+      </option>
+    </select>
+    <label for="plantFilter" *ngIf="selectedType === 'Plant'" >Select Pot Color</label>
+    <select id="plantFilter" *ngIf="selectedType === 'Plant'" (change)="filter($event, 'Plant','potColor')">
+      <option value="" hidden></option>
+      <option *ngFor="let option of getAvailablePlantPots()" value="{{option}}">
+        {{option}}
+      </option>
+    </select>
+  </div>
+
+  <div class="products">
+    <div *ngFor="let inventoryItem of displayedInventoryItems">
+      <app-inventory-item *ngIf="inventoryItem.quantity > 0" [inventoryItem]="inventoryItem"
+                          (addItemToCart)="addItemToCart($event)"></app-inventory-item>
+    </div>
+  </div>
+
+  <app-cart class="cart" [cart]="cart"></app-cart>
+</div>
+
+
+

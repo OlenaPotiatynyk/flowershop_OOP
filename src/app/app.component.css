@@ -1,0 +1,25 @@
+.store {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.filter {
+  width: 100%;
+  margin: 5px;
+}
+
+.cart {
+  width: 20%;
+}
+
+.products {
+  display: flex;
+  width: 78%;
+  justify-content: space-between;
+  flex-flow: wrap;
+  border: 1px solid darkgreen;
+}
+
+.inventory_item{
+  width: 23%
+}
