@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   cart: Cart;
   address: string;
   showReceipt = false;
+  showEmptyCartError = false;
 
   constructor() {
   }
@@ -29,13 +30,20 @@ export class CartComponent implements OnInit {
   }
 
   placeOrder() {
-    this.showReceipt = true;
-    setTimeout(() => {
-      this.cart.clearCart();
-      this.showReceipt = false;
-      this.deliveryNeeded = false;
-      this.address = '';
-    }, 3000);
+    if (this.cart.cartItems.length < 1) {
+      this.showEmptyCartError = true;
+      setTimeout(() => {
+        this.showEmptyCartError = false;
+      }, 3000);
+    } else {
+      this.showReceipt = true;
+      setTimeout(() => {
+        this.cart.clearCart();
+        this.showReceipt = false;
+        this.deliveryNeeded = false;
+        this.address = '';
+      }, 3000);
+    }
   }
 
   updateAddress() {

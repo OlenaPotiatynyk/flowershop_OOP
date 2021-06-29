@@ -31,3 +31,7 @@
 .order_success {
   color: darkgreen;
 }
+
+.order_error {
+  color: red;
+}
