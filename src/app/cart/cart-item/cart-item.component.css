@@ -16,3 +16,9 @@
   max-width: 140px;
   overflow-wrap: break-word;
 }
+
+.item_price,
+.item__quantity,
+.item_amount {
+  width: 30px;
+}
